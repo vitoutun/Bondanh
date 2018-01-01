@@ -26,7 +26,6 @@ class CityController extends Controller
     public function create()
     {
         //
-        //
     }
 
     /**
