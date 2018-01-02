@@ -85,6 +85,6 @@ class CityController extends Controller
      */
     public function destroy($id)
     {
-        //
+        City::destroy($id);
     }
 }

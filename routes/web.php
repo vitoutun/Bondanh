@@ -15,6 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/city_view', 'CityController@index');
+Route::resource('city', 'CityController');
 
-Route::post('/city_add', 'CityController@store');
