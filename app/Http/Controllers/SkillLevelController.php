@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\City;
-use Illuminate\Database\Eloquent\Model;
+use App\Model\SkillLevel;
 use Illuminate\Http\Request;
 
-class CityController extends Controller
+class SkillLevelController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class CityController extends Controller
      */
     public function index()
     {
-        return City::all();
+        return SkillLevel::all();
     }
 
     /**
@@ -36,11 +35,11 @@ class CityController extends Controller
      */
     public function store(Request $request)
     {
-        $city = new City;
+        $skill_level = new SkillLevel();
 
-        $city->name = $request->name;
+        $skill_level->name = $request->name;
 
-        $city->save();
+        $skill_level->save();
     }
 
     /**
@@ -74,7 +73,7 @@ class CityController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        //
     }
 
     /**
@@ -85,6 +84,6 @@ class CityController extends Controller
      */
     public function destroy($id)
     {
-        City::destroy($id);
+        SkillLevel::destroy($id);
     }
 }

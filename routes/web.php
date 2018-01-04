@@ -17,3 +17,11 @@ Route::get('/', function () {
 
 Route::resource('city', 'CityController');
 
+Route::resource('school', 'SchoolController');
+
+Route::resource('institution', 'InstitutionController');
+
+Route::resource('language', 'LanguageController');
+
+Route::resource('skill', 'SkillLevelController');
+

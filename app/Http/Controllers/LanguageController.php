@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\City;
-use Illuminate\Database\Eloquent\Model;
+use App\Model\Language;
 use Illuminate\Http\Request;
 
-class CityController extends Controller
+class LanguageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class CityController extends Controller
      */
     public function index()
     {
-        return City::all();
+        return Language::all();
     }
 
     /**
@@ -36,11 +35,13 @@ class CityController extends Controller
      */
     public function store(Request $request)
     {
-        $city = new City;
+        $language = new Language;
 
-        $city->name = $request->name;
+        $language->language_name = $request->language_name;
 
-        $city->save();
+        $language->proficiency = $request->proficiency;
+
+        $language->save();
     }
 
     /**
@@ -74,7 +75,7 @@ class CityController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        //
     }
 
     /**
@@ -85,6 +86,7 @@ class CityController extends Controller
      */
     public function destroy($id)
     {
-        City::destroy($id);
+        Language::destroy($id);
+
     }
 }

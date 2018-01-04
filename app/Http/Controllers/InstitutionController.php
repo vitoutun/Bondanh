@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\City;
-use Illuminate\Database\Eloquent\Model;
+use App\Model\Institution;
 use Illuminate\Http\Request;
 
-class CityController extends Controller
+class InstitutionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class CityController extends Controller
      */
     public function index()
     {
-        return City::all();
+        return Institution::all();
     }
 
     /**
@@ -36,11 +35,11 @@ class CityController extends Controller
      */
     public function store(Request $request)
     {
-        $city = new City;
+        $institution = new Institution();
 
-        $city->name = $request->name;
+        $institution->name = $request->name;
 
-        $city->save();
+        $institution->save();
     }
 
     /**
@@ -74,7 +73,7 @@ class CityController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        //
     }
 
     /**
@@ -85,6 +84,6 @@ class CityController extends Controller
      */
     public function destroy($id)
     {
-        City::destroy($id);
+        Institution::destroy($id);
     }
 }
